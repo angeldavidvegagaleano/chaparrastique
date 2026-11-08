@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- Pide a los buscadores que no la indexen. BORRAR esta linea el dia del lanzamiento. -->
+<meta name="robots" content="noindex">
+<title>CHAPARRASTIQUE</title>
+<link rel="stylesheet" href="estilo.css">
+</head>
+
+<!-- ESTADO: class="fuera" (fuera de emision) o class="vivo" (en emision).
+     Lo cambia emision.js segun el reloj. -->
+<body class="fuera">
+
+    <!-- ESCENARIO: mide lo mismo que el video (config.js > escenario) y se
+         amplia para llenar la ventana. Las capas, de atras hacia adelante: -->
+    <div id="escenario">
+
+        <!-- 1. El video, al fondo -->
+        <video id="fondo" muted playsinline preload="auto" aria-hidden="true"></video>
+
+        <!-- 2. El velo: una capa transparente donde van apareciendo los pixeles blancos -->
+        <canvas id="velo" aria-hidden="true"></canvas>
+
+        <!-- 3. La frase fija -->
+        <div id="frase" aria-live="polite"></div>
+
+        <!-- 4. Mensaje fuera de emision -->
+        <div id="fuera-de-emision">
+            <p>Chaparrastique. 15:53.</p>
+        </div>
+
+    </div>
+
+    <!-- Scripts: el orden importa -->
+    <script src="config.js"></script>
+    <script src="emision.js"></script>
+    <script src="escala.js"></script>
+    <script src="video.js"></script>
+    <script src="frase.js"></script>
+    <script src="entradas.js"></script>
+    <script src="velo.js"></script>
+
+</body>
+</html>

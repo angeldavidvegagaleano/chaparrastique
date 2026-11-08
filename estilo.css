@@ -1,0 +1,103 @@
+/* ============================================================
+   CHAPARRASTIQUE - estilo.css
+   La pagina es un escenario de 424 x 240 (el tamano del video)
+   que escala.js amplia para llenar la ventana. Por eso todas las
+   medidas de aqui estan pensadas en ESE tamano pequeno:
+   14px aqui son unos 63px en una pantalla de 1920 x 1080.
+   ============================================================ */
+
+:root {
+    --escala-x: 1;            /* las calcula escala.js */
+    --escala-y: 1;
+
+    /* Bloque de la frase (medidas dentro del escenario de 424 x 240) */
+    --frase-ancho: 340px;
+    --frase-alto: 70px;
+    --frase-abajo: 80px;      /* distancia al borde inferior */
+    --frase-tamano: 5px;
+
+    /* Colores de la frase: letra y contorno (el contorno la mantiene legible
+       tanto sobre el video oscuro como sobre el velo blanco) */
+    --color-frase: #0000ff;
+
+}
+
+html, body {
+    margin: 0;
+    height: 100%;
+    overflow: hidden;
+    background: #000;          /* las franjas negras cuando la pantalla no es 16:9 */
+    color: #fff;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+/* El escenario: su tamano lo pone escala.js desde config.js */
+#escenario {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: scale(var(--escala-x), var(--escala-y));
+    transform-origin: center center;
+    overflow: hidden;
+    background: #000;
+}
+
+/* Capa 1 y 2: video y velo ocupan todo el escenario */
+#fondo,
+#velo {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+}
+
+#fondo { object-fit: cover; z-index: 0; }
+
+/* pixelated: al ampliar, cada pixel blanco se ve como un cuadrado nitido */
+#velo { image-rendering: pixelated; z-index: 1; }
+
+/* Capa 3: la frase */
+#frase {
+    position: absolute;
+    left: 50%;
+    bottom: var(--frase-abajo);
+    margin-left: calc(var(--frase-ancho) / -2);
+    width: var(--frase-ancho);
+    height: var(--frase-alto);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    overflow: hidden;
+    font-size: var(--frase-tamano);
+    line-height: 1.3;
+    color: var(--color-frase);
+    text-shadow: 0 0 2px var(--contorno-frase), 0 0 3px var(--contorno-frase), 0 0 4px var(--contorno-frase);
+    z-index: 2;
+}
+#frase.oculta { visibility: hidden; }
+
+/* Capa 4: mensaje fuera de emision */
+#fuera-de-emision {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    color: #0000ff;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-size: 6px;
+    z-index: 3;
+}
+#fuera-de-emision p { margin: 0; }
+
+/* ESTADOS */
+body.fuera #fondo,
+body.fuera #velo,
+body.fuera #frase { display: none; }
+
+body.vivo #fuera-de-emision { display: none; }
