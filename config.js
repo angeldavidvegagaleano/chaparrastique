@@ -30,7 +30,7 @@ var CONFIG = {
                   control para cambiar el numero de entradas.
        'real'   = hora verdadera y registro real de entradas. */
     reloj: {
-        modo: 'real',
+        modo: 'ensayo',
         horaEnsayo: '15:53:00'
     },
 
@@ -57,9 +57,11 @@ Om bhur bhuvah svah । Meditamos en el excelso resplandor del sol । para que 
                             correcto con el video completo.
                     false = el video arranca de cero y se repite en bucle.
                             Sirve para probar con un fragmento corto.
-       toleranciaSegundos: diferencia maxima entre video y reloj antes de corregir. */
+       toleranciaSegundos: diferencia maxima entre video y reloj antes de corregir. 
+       https://archive.org/download/12.02.18VolcanChaparrastique/12.02.18%20Volca%CC%81n%20Chaparrastique%20%5Bsunset%5D.mp4
+       */
     video: {
-        url: 'https://archive.org/download/12.02.18VolcanChaparrastique/12.02.18%20Volca%CC%81n%20Chaparrastique%20%5Bsunset%5D.mp4',
+        url: 'sunsetligero.mp4',
         sincronizar: true,
         toleranciaSegundos: 2
     },
