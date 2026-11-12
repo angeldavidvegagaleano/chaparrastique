@@ -30,7 +30,7 @@ var CONFIG = {
                   control para cambiar el numero de entradas.
        'real'   = hora verdadera y registro real de entradas. */
     reloj: {
-        modo: 'real',
+        modo: 'ensayo',
         horaEnsayo: '15:53:00'
     },
 
