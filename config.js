@@ -98,14 +98,13 @@ Om bhur bhuvah svah । Meditamos en el excelso resplandor del sol । para que 
         ensayo: 0,                    /* ocasión simulada en modo ensayo (o ?ocasion=3 en la dirección) */
         lista: [
             { ocasion: 3,  archivo: 'carta3.html'  },
-           { ocasion: 15,  archivo: 'carta15.html'  },
            { ocasion: 27,  archivo: 'carta27.html'  },
            { ocasion: 39,  archivo: 'carta39.html'  },
            { ocasion: 51,  archivo: 'carta51.html'  },
            { ocasion: 63,  archivo: 'carta63.html'  },
            { ocasion: 75,  archivo: 'carta75.html'  },
-           { ocasion: 87,  archivo: 'carta75.html'  },
-           { ocasion: 99,  archivo: 'carta87.html'  }
+           { ocasion: 99,  archivo: 'carta75.html'  },
+           { ocasion: 100,  archivo: 'carta87.html'  }
       
         ]
     }
