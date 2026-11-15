@@ -87,5 +87,19 @@ Om bhur bhuvah svah । Meditamos en el excelso resplandor del sol । para que 
         pixelesPorEntrada: 1000,
         ensayo: 0,
         maximoEnsayo: 120
+    },
+
+   /* ---------- Cartas por número de ingreso ---------- */
+    cartas: {
+        servicioIP: 'https://api.ipify.org?format=json',
+        guardarIPEnClaro: false,      /* true = se guarda la IP tal cual */
+        sal: 'chaparrastique',        /* palabra que se mezcla con la IP antes de hacer la huella */
+        ventana: 'width=420,height=520',
+        ensayo: 0,                    /* ocasión simulada en modo ensayo (o ?ocasion=3 en la dirección) */
+        lista: [
+            { ocasion: 3,  archivo: 'carta3.html'  },
+            { ocasion: 10, archivo: 'carta10.html' },
+            { ocasion: 35, archivo: 'carta35.html' }
+        ]
     }
 };
