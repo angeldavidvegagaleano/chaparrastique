@@ -19,8 +19,8 @@ var CONFIG = {
        Hora de Colombia (UTC-5, sin horario de verano), igual para todo el mundo.
        De 15:53:00 a 18:09:00 hay 2 h 16 min = 8160 segundos. */
     horario: {
-        inicio: '11:00:00',
-        fin: '13:09:00',
+        inicio: '15:53:00',
+        fin: '18:09:00',
         desfaseUTC: -5
     },
 
@@ -30,7 +30,7 @@ var CONFIG = {
                   control para cambiar el numero de entradas.
        'real'   = hora verdadera y registro real de entradas. */
     reloj: {
-        modo: 'real',
+        modo: 'ensayo',
         horaEnsayo: '15:53:00'
     },
 
