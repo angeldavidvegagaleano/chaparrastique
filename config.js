@@ -11,7 +11,7 @@ var CONFIG = {
        Tamano de la pagina en pixeles: el mismo del video. La pagina se
        amplia para llenar la ventana manteniendo la proporcion 16:9. */
     escenario: {
-        ancho: 424,
+        ancho: 424, 
         alto: 240
     },
 
